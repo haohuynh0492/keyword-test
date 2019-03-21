@@ -9,27 +9,44 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-    var keyWords = [HotKeyword]()
-    let keyword_url = "https://tiki-mobile.s3-ap-southeast-1.amazonaws.com/ios/keywords.json"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        Alamofire.request(keyword_url).responseJSON { response in
-            let json = response.data
-            
-            if let jsonObj = try? JSONSerialization.jsonObject(with: json!, options: .allowFragments) as? NSDictionary {
-                if let kwArray = jsonObj!.value(forKey: "keywords") as? NSArray {
-
-                    for keyword in kwArray {
-                        guard let kwDict = keyword as? NSDictionary else {
-                            return
-                        }
-                        print(kwDict)
-                    }
-                }
-        }
+        
+       getData()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
+    
 }
 
+func getData() {
+    var itemArray = [KeyWords]()
+    let keyword_url = "https://tiki-mobile.s3-ap-southeast-1.amazonaws.com/ios/keywords.json"
+    Alamofire.request(keyword_url).responseObject { (response: DataResponse<HotItems>) in
+        
+        let itemResponse = response.result.value
+
+        if let keyWords = itemResponse?.keyWords {
+            for item in keyWords {
+                itemArray.append(item)
+//                print(item.keyword ?? "")
+//                print(item.icon ?? "")
+            }
+        }
+
+    }
+    
+}
+//extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return
+//    }
+    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        return
+//    }
+
+//}

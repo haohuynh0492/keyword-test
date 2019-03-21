@@ -17,8 +17,9 @@
 		B6069EAD2243C1D6000587E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6069EAB2243C1D6000587E0 /* LaunchScreen.storyboard */; };
 		B6069EB82243C1D6000587E0 /* Keyword_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6069EB72243C1D6000587E0 /* Keyword_testTests.swift */; };
 		B6069EC32243C1D6000587E0 /* Keyword_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6069EC22243C1D6000587E0 /* Keyword_testUITests.swift */; };
-		B6069ED22243D306000587E0 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6069ED12243D306000587E0 /* Keyword.swift */; };
+		B6069ED22243D306000587E0 /* HotItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6069ED12243D306000587E0 /* HotItems.swift */; };
 		B6069ED72243D70B000587E0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6069ED62243D70B000587E0 /* API.swift */; };
+		B6069ED922441FB6000587E0 /* HotItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6069ED822441FB6000587E0 /* HotItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +58,9 @@
 		B6069EBE2243C1D6000587E0 /* Keyword-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Keyword-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6069EC22243C1D6000587E0 /* Keyword_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword_testUITests.swift; sourceTree = "<group>"; };
 		B6069EC42243C1D6000587E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6069ED12243D306000587E0 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		B6069ED12243D306000587E0 /* HotItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotItems.swift; sourceTree = "<group>"; };
 		B6069ED62243D70B000587E0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B6069ED822441FB6000587E0 /* HotItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE741E2B6972938B998D976A /* Pods_Keyword_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keyword_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B7D5CD287A996F28106258 /* Pods-Keyword-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keyword-test.debug.xcconfig"; path = "Target Support Files/Pods-Keyword-test/Pods-Keyword-test.debug.xcconfig"; sourceTree = "<group>"; };
 		F41F2F6044B45A5B52BF4245 /* Pods-Keyword-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keyword-testUITests.release.xcconfig"; path = "Target Support Files/Pods-Keyword-testUITests/Pods-Keyword-testUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +163,8 @@
 		B6069ED02243D2C2000587E0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				B6069ED12243D306000587E0 /* Keyword.swift */,
+				B6069ED12243D306000587E0 /* HotItems.swift */,
+				B6069ED822441FB6000587E0 /* HotItemCollectionViewCell.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Keyword-test/Pods-Keyword-test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
@@ -379,6 +383,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -417,7 +422,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6069EA52243C1D4000587E0 /* ViewController.swift in Sources */,
-				B6069ED22243D306000587E0 /* Keyword.swift in Sources */,
+				B6069ED922441FB6000587E0 /* HotItemCollectionViewCell.swift in Sources */,
+				B6069ED22243D306000587E0 /* HotItems.swift in Sources */,
 				B6069ED72243D70B000587E0 /* API.swift in Sources */,
 				B6069EA32243C1D4000587E0 /* AppDelegate.swift in Sources */,
 			);
